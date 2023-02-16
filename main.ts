@@ -1,0 +1,16 @@
+led.enable(false)
+let tiempo = 1
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P4, 0)
+    pins.digitalWritePin(DigitalPin.P6, 1)
+    basic.pause(tiempo * 3000)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P4, 1)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    basic.pause(tiempo * 1000)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    pins.digitalWritePin(DigitalPin.P4, 0)
+    pins.digitalWritePin(DigitalPin.P6, 0)
+    basic.pause(tiempo * 3000)
+})
